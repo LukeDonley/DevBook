@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://titustwimbly:lad082581@devbook-lj8l8.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken"
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "4b2c87bdafb855f91039",
+  "githubSecret": "247da13e672850661aa277cdf86d47268a19b364"
 }
