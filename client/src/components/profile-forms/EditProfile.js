@@ -29,7 +29,9 @@ const EditProfile = ({
 
   useEffect(() => {
     getCurrentProfile();
+  }, [getCurrentProfile]);
 
+  useEffect(() => {
     setFormData({
       company: loading || !profile.company ? '' : profile.company,
       website: loading || !profile.website ? '' : profile.website,
@@ -45,7 +47,7 @@ const EditProfile = ({
       youtube: loading || !profile.youtube ? '' : profile.youtube,
       instagram: loading || !profile.instagram ? '' : profile.instagram
     });
-  }, [loading, getCurrentProfile]);
+  }, [loading, profile]);
 
   const {
     company,
