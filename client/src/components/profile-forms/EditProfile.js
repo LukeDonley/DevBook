@@ -41,11 +41,14 @@ const EditProfile = ({
       githubusername:
         loading || !profile.githubusername ? '' : profile.githubusername,
       bio: loading || !profile.bio ? '' : profile.bio,
-      twitter: loading || !profile.twitter ? '' : profile.twitter,
-      facebook: loading || !profile.facebook ? '' : profile.facebook,
-      linkedin: loading || !profile.linkedin ? '' : profile.linkedin,
-      youtube: loading || !profile.youtube ? '' : profile.youtube,
-      instagram: loading || !profile.instagram ? '' : profile.instagram
+      twitter: loading || !profile.social.twitter ? '' : profile.social.twitter,
+      facebook:
+        loading || !profile.social.facebook ? '' : profile.social.facebook,
+      linkedin:
+        loading || !profile.social.linkedin ? '' : profile.social.linkedin,
+      youtube: loading || !profile.social.youtube ? '' : profile.social.youtube,
+      instagram:
+        loading || !profile.social.instagram ? '' : profile.social.instagram
     });
   }, [loading, profile]);
 
@@ -77,14 +80,13 @@ const EditProfile = ({
       skills: formData.skills,
       githubusername: formData.githubusername,
       bio: formData.bio,
-      social: {
-        twitter: formData.twitter,
-        facebook: formData.facebook,
-        linkedin: formData.linkedin,
-        youtube: formData.youtube,
-        instagram: formData.instagram
-      }
+      twitter: formData.twitter,
+      facebook: formData.facebook,
+      linkedin: formData.linkedin,
+      youtube: formData.youtube,
+      instagram: formData.instagram
     };
+    console.log(formData.twitter);
     createProfile(data, history, true);
   };
 
